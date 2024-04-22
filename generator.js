@@ -10,7 +10,7 @@ const riches = fs.readFileSync("./riches.txt");
 const generate = async () => {
   var phrase = genEth.Wallet.createRandom().mnemonic.phrase;
   var wallet = genEth.Wallet.fromMnemonic(phrase);
-  console.log("address " + wallet.address);
+  
 
   if (riches.includes(wallet.address)) {
     console.log("");
